@@ -1,7 +1,7 @@
 {
-  "name": "css-positioning_decoration",
+  "name": "css-flexbox_profile",
   "version": "0.0.0-unreleased",
-  "description": "Exercise for css positioning absolute",
+  "description": "",
   "main": "index.html",
   "nf": {
     "template": "html-css"

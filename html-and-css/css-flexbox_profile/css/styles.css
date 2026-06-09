@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+h2 {
+  color: #3f0097;
+}
+
+.main__title {
+  padding: 10px;
+  background: #fddcd2;
+  color: #3f0097;
+}
+
+.profile__image {
+  object-fit: cover;
+  border-radius: 999px;
+  aspect-ratio: 1 / 1;
+  border: solid #3f0097 1px;
+  max-width: 50%;
+  align-self: center;
+}
+
+.tech-stack__list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-stack__list-item {
+  padding: 10px;
+  background-color: #3f0097;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+
+# CSS Flexbox: Profile
+
+## Tasks
+
+Utilize what you've learned about flexbox to complete the following tasks:
+
+1. **Profile Section Structure**
+
+- The profile section contains a level 2 heading, an image and an about text.
+- Center the image within this section.
+
+2. **Tech Stack List Styling**
+
+- Arrange the list items horizontally instead of stacking them vertically.
+- Ensure there is a gap of at least 10px between each “Tech Stack” item.
+- Allow list items to wrap to the next line when there isn’t enough horizontal space.
+
+
+
+*/
