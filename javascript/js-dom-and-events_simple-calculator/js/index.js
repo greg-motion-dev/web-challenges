@@ -55,7 +55,6 @@ divideButton.addEventListener("click", ()=>{
     console.log(result);
 })
 
-
 exponentButton.addEventListener("click", ()=>{
     const result = operand1 ** operand2;
     console.log(result);

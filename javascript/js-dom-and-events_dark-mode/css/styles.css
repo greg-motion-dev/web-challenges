@@ -19,6 +19,7 @@ body {
   transition: 0.4s ease;
 }
 
+
 body.dark {
   background-color: var(--primary-dark);
   color: var(--white);

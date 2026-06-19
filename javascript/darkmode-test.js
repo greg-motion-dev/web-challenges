@@ -18,9 +18,9 @@ function toggleDarkmode(){
     bodyElement.classList.toggle("dark");
 }
 
-function anonymousFunction()("click", ()=>{
+function anonymousFunction(){"click", ()=>{
    bodyElement.classList.toggle("dark");
-});
+}};
 
 
 addButton.addEventListener("click", addDarkmode);
