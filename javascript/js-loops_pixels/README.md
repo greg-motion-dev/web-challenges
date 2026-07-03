@@ -8,7 +8,7 @@ Use the color values in the `pixelValues` array to create "pixel" elements and a
 
 - Use `for` loops to generate the pixel elements.
 - Each pixel should be a `div` element with the class `pixel` and have a background color set to the respective color from the `pixelValues` array.
-- Append all pixels directly to the canvas - no additional row grouping is necessary.
+- Append all pixels directly to the canvas - noclear additional row grouping is necessary.
 - Hint: The colors are stored as arrays within another array. Consider how you can access these values with nested `for` loops.
 
 Switch to the `./js/index.js` file and bring your pixel art to life!
