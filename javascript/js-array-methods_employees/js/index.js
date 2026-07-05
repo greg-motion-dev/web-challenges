@@ -6,58 +6,21 @@ import { employees } from "../utils/db.js";
 // Check the browser preview and conduct some tests to ensure it works correctly.
 
 function findByLastName(employees, lastName) {
-  const foundLastName = employees.find((employee)=>{
-    employee.lastName === lastName;
-  })
-
-  }
+  return employees.find((employee) => employee.lastName === lastName); // looks into the object, and specifically for employee.lastName to match it to lastName
   
-  const foundItem = array.find((item) => {
-    // Return true if this item is the one we are looking for!
-});
-
-function findByLastName(employees, lastName) {
-  // 1. Run find(), name the single item 'employee'
-  const foundEmployee = employees.find((employee) => {
-    // 2. Explicitly return the true/false condition
-    return employee.lastName === lastName;
-  });
-
-  // 3. Return the final result to the outside world
-  return foundEmployee;
 }
-
-
-function findByLastName(employees, lastName) {
-  return employees.find(employee => employee.lastName === lastName);
-}
-
-  // function hasAnimal(animals, animalName) {
-
-  // const lowerCasing = animals.map((animal) => {
-  //   return animal.toLowerCase();
-  // })
-
-  // if (lowerCasing.includes(animalName.toLowerCase())){
-  //   return true;
-  // } else {
-  //   return false;
-  // }
-
-  // ;
 
   // Exercise 2:
   // The same as above, but now you are searching by the 'id'.
-
 function findById(employees, id) {
-  return null;
+  return employees.find((employee)=>employee.id === id);
 }
 
 // Exercise 3:
 // This time you want to find an employee who lives in a city that includes a specific substring.
 
 function findByCitySubString(employees, string) {
-  return null;
+  return employees.find((employee)=>  employee.city.includes(string));
 }
 
 // Bonus:
@@ -65,7 +28,7 @@ function findByCitySubString(employees, string) {
 // AND who is older than a specific age
 
 function findByProfessionSubStringAndAge(employees, string, age) {
-  return null;
+  return  employees.find((employee)=>  employee.profession.includes(string) && (employee.age > age ));
 }
 
 // ------------------------------------------------------------------------------
