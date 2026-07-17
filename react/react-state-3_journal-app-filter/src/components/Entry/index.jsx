@@ -5,9 +5,9 @@ export default function Entry({
   motto,
   notes,
   date,
-  onToggleFavorite,
-  isFavorite,
   id,
+  isFavorite,
+  onToggleFavorite,
 }) {
   return (
     <article className="entry">
@@ -18,9 +18,9 @@ export default function Entry({
             <q>{motto}</q>
           </h2>
           <FavoriteButton
-            onToggleFavorite={onToggleFavorite}
-            isFavorite={isFavorite}
             id={id}
+            isFavorite={isFavorite}
+            onToggleFavorite={onToggleFavorite}
           />
         </div>
         <p className="entry__notes">{notes}</p>
