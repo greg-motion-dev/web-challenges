@@ -11,6 +11,7 @@ const initialEntries = [
     id: 1000,
     date: "Feb 5, 2025",
     motto: "We are in a state of chaos",
+    isFavorite: false,
     notes:
       "Today I learned about React State. It was fun! I can't wait to learn more.",
   },
@@ -20,6 +21,7 @@ const initialEntries = [
     motto: "Props, Props, Props",
     notes:
       "Today I learned about React Props. Mad props to everyone who understands this!",
+    isFavorite: false,
   },
   {
     id: 998,
@@ -27,12 +29,14 @@ const initialEntries = [
     motto: "How to nest components online fast",
     notes:
       "Today I learned about React Components and how to nest them like a pro. Application design is so much fun!",
+    isFavorite: false,
   },
   {
     id: 997,
     date: "Feb 2, 2025",
     motto: "I'm a React Developer",
     notes: "My React-ion when I learned about React: Yay!",
+    isFavorite: false,
   },
 ];
 
@@ -43,7 +47,25 @@ function App() {
     const date = new Date().toLocaleDateString("en-us", {
       dateStyle: "medium",
     });
-    setEntries([{ id: uid(), date, ...newEntry }, ...entries]);
+    setEntries([
+      { id: uid(), date, isFavorite: false, ...newEntry },
+      ...entries,
+    ]);
+  }
+
+  function handleToggleFavorite(id) {
+    setEntries(
+      entries.map((entry) => {
+        // if the entry the user clicks on
+        if (entry.id === id)
+          // return a brand new object, copying all the old properties
+          // but flipping the 'isFavorite' boolean to its opposite!
+          return { ...entry, isFavorite: !entry.isFavorite };
+
+        // other wise just return the entry as it is.
+        return entry;
+      }),
+    );
   }
 
   return (
@@ -51,7 +73,10 @@ function App() {
       <Header />
       <main className="app__main">
         <EntryForm onAddEntry={handleAddEntry} />
-        <EntriesSection entries={entries} />
+        <EntriesSection
+          entries={entries}
+          onToggleFavorite={handleToggleFavorite}
+        />
       </main>
       <Footer />
     </div>
